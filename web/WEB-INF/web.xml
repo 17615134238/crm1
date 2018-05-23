@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>cn.com.zhirun.crm.filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>cn.com.zhirun.crm.filter.LogiddnFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/Qurey</url-pattern>
+        <url-pattern>/Add</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>QureyServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.QureyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QureyServlet</servlet-name>
+        <url-pattern>/Qurey</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OutServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.OutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OutServlet</servlet-name>
+        <url-pattern>/Out</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/Add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectUserByNameServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.SelectUserByNameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectUserByNameServlet</servlet-name>
+        <url-pattern>/SelectUserByName</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>InsertUserServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.InsertUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertUserServlet</servlet-name>
+        <url-pattern>/InsertUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectUserServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.SelectUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectUserServlet</servlet-name>
+        <url-pattern>/SelectUser</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>InsertBnsServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.InsertBnsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertBnsServlet</servlet-name>
+        <url-pattern>/InsertBns</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SelectBnsServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.SelectBnsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectBnsServlet</servlet-name>
+        <url-pattern>/SelectBns</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteBnsServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.DeleteBnsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBnsServlet</servlet-name>
+        <url-pattern>/DeleteBns</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectBnsByIdServlet</servlet-name>
+        <servlet-class>cn.com.zhirun.crm.servlet.SelectBnsByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectBnsByIdServlet</servlet-name>
+        <url-pattern>/SelectBnsById</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>UpdateBnsServlet</servlet-name>
+    <servlet-class>cn.com.zhirun.crm.servlet.UpdateBnsServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateBnsServlet</servlet-name>
+        <url-pattern>/UpdateBns</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>
